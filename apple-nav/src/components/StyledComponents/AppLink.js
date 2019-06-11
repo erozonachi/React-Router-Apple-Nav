@@ -6,10 +6,13 @@ const AppLink = styled(NavLink)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: inherit;
+  color: ${props => props.active? '#ccc' : 'inherit'};
   text-decoration: none;
   &:link, &:visited {
     color:inherit;
+  }
+  &:hover {
+    color: #ccc;
   }
 
   img {
