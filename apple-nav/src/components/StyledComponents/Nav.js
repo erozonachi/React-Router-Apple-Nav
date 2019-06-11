@@ -6,11 +6,11 @@ const Nav = styled.nav`
   align-items: baseline;
   width: 100%;
   padding: 10px 0;
-  background-color: #333;
+  background-color: #111;
   color: #fff;
   &:last-of-type {
-    background-color: #eee;
-    color: #111;
+    background-color: ${(props) => props.darken? '#000' : '#eee'};
+    color: ${(props) => props.darken? '#fff' : '#111'};
   }
 `;
 

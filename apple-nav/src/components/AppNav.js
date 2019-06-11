@@ -10,11 +10,11 @@ export default function AppNav(props) {
     <NavWrapper>
       <Router>
         <Nav>
-          {props.navLinks.map(link => <Link link={link} />)}
+          {props.navLinks.map(link => <Link key={link.id} link={link} />)}
         </Nav>
           <NavWrapper>
-  {props.navLinks.map(link => link.subLinks? <Route path={`/${link.id}`} render={(props) => (
-    <Nav>{link.subLinks.map(item => <Link link={item} {...props} />)}</Nav>
+  {props.navLinks.map(link => link.subLinks? <Route key={link.id} path={`/${link.id}`} render={(props) => (
+    <Nav darken={link.id === 'tv'? true : false}>{link.subLinks.map(item => <Link key={item.id} link={item} {...props} />)}</Nav>
   )} /> : null)}
           </NavWrapper>
       </Router>
