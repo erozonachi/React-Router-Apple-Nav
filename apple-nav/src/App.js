@@ -1,10 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect, } from 'react';
+import AppNav from './components/AppNav';
+import navList from './nav-data';
+
 import './App.css';
 
 function App() {
+  const [navLinks, setNavLinks] = useState([]);
+
+  useEffect(() => setNavLinks(navList));
+
   return (
-    <div className="App">
+   <AppNav navLinks={navLinks} />
+    /* <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +26,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </div> */
   );
 }
 

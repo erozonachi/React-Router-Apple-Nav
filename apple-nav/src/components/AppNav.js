@@ -6,22 +6,17 @@ import NavWrapper from './StyledComponents/NavWrapper';
 
 export default function AppNav(props) {
 
-  const [links, setLinks] = useState(props.links);
-
   return (
     <NavWrapper>
       <Router>
         <Nav>
-          {links.map(link => <Link link={link} />)}
+          {props.navLinks.map(link => <Link link={link} />)}
         </Nav>
-        <Route>
           <NavWrapper>
-  {links.map(link => link.subLinks? <Nav>{link.subLinks.map(item => {
-    item.id = `${link.id}/${item.id}`;
-    return <Link link={item} />;
-  })}</Nav> : null)}
+  {props.navLinks.map(link => link.subLinks? <Route path={`/${link.id}`} render={(props) => (
+    <Nav>{link.subLinks.map(item => <Link link={item} {...props} />)}</Nav>
+  )} /> : null)}
           </NavWrapper>
-        </Route>
       </Router>
     </NavWrapper>
   );
