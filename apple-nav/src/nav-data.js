@@ -1,0 +1,292 @@
+const navList = [
+  {
+    id: '/',
+    label: 'Home',
+  },
+  {
+    id: 'mac',
+    label: 'Mac',
+    subLinks: [
+      {
+        label: 'MacBook',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/macbook__do4qnh249seq_large.svg'
+      },
+      {
+        label: 'MacBook Air',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/macbookair__ej39du0gz4uq_large.svg'
+      },
+      {
+        label: 'MacBook Pro',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/imac_pro__eer4bfwlutme_large.svg'
+      },
+      {
+        label: 'iMac',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/imac__dkswmjfqeziq_large.svg'
+      },
+      {
+        label: 'iMac Pro',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/imac_pro__eer4bfwlutme_large.svg'
+      },
+      {
+        label: 'Mac Pro',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/mac_pro__bn92faz71k6a_large.svg'
+      },
+      {
+        label: 'Mac mini',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/macmini__c6u0it831y0y_large.svg'
+      },
+      {
+        label: 'Compare',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/mac_comp__ee2pokmcxh26_large.svg'
+      },
+      {
+        label: 'Pro Display XDR',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/pro_display_xdr__do0vjpny1kqe_large.svg'
+      },
+      {
+        label: 'Accessories',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/mac_acc__fy6vtx5eqoyi_large.svg'
+      },
+      {
+        label: 'Mojave',
+        url:
+          'https://www.apple.com/v/mac/home/ag/images/familybrowser/mac_osx__dntc9ef2limq_large.svg'
+      }
+    ]
+  },
+  {
+    id: 'ipad',
+    label: 'iPad',
+    subLinks: [
+      {
+        label: 'iPad Pro',
+        url:
+          'https://www.apple.com/v/ipad/home/ar/images/chapternav/ipadpro_light__dxq7nxjgsd2e_large.svg'
+      },
+      {
+        label: 'iPad Air',
+        url:
+          'https://www.apple.com/v/ipad/home/ar/images/chapternav/ipadair_light__gan6yfrffc66_large.svg'
+      },
+      {
+        label: 'iPad',
+        url:
+          'https://www.apple.com/v/ipad/home/ar/images/chapternav/ipad_light__expohijp19si_large.svg'
+      },
+      {
+        label: 'iPad Mini',
+        url:
+          'https://www.apple.com/v/ipad/home/ar/images/chapternav/ipadmini_light__bxpulkud30s2_large.svg'
+      },
+      {
+        label: 'Compare',
+        url:
+          'https://www.apple.com/v/ipad/home/ar/images/chapternav/ipad_comp_light__f80dzq6i8sq6_large.svg'
+      },
+      {
+        label: 'Apple Pencil',
+        url:
+          'https://www.apple.com/v/ipad/home/ar/images/chapternav/apple_pencil_light__e9zorbynwqie_large.svg'
+      },
+      {
+        label: 'Smart Keyboard',
+        url:
+          'https://www.apple.com//v/ipad/home/ar/images/chapternav/keyboard_light__cjbr6d6i2vbm_large.svg'
+      },
+      {
+        label: 'Accessories',
+        url:
+          'https://www.apple.com/v/ipad/home/ar/images/chapternav/ipad_acc_light__ebtftz3r2rwy_large.svg'
+      },
+      {
+        label: 'iOS 12',
+        url:
+          'https://www.apple.com/v/ipad/home/ar/images/chapternav/ios_light__d8hlu55ivueu_large.svg'
+      }
+    ]
+  },
+  {
+    id: 'iphone',
+    label: 'iPhone',
+    subLinks: [
+      {
+        label: 'iPhone Xs',
+        url:
+          'https://www.apple.com/v/iphone/home/aa/images/chapternav/iphonexs__haztskdvse62_large.svg'
+      },
+      {
+        label: 'iPhone XR',
+        url:
+          'https://www.apple.com/v/iphone/home/aa/images/chapternav/iphonexr__dc5ls4xainsm_large.svg'
+      },
+      {
+        label: 'iPhone 8',
+        url:
+          'https://www.apple.com/v/iphone/home/aa/images/chapternav/iphone8__ces17dqh6j6q_large.svg'
+      },
+      {
+        label: 'iPhone 7',
+        url:
+          'https://www.apple.com/v/iphone/home/aa/images/chapternav/iphone7__ew0p3ahbemuu_large.svg'
+      },
+      {
+        label: 'Compare',
+        url:
+          'https://www.apple.com/v/iphone/home/aa/images/chapternav/compare__fx9dq75qwnma_large.svg'
+      },
+      {
+        label: 'Apple Card',
+        url:
+          'https://www.apple.com/v/iphone/home/aa/images/chapternav/applecard__gip86jgm8zee_large.svg'
+      },
+      {
+        label: 'Air Pods',
+        url:
+          'https://www.apple.com/v/iphone/home/aa/images/chapternav/airpods__c6lrgkbcjdg2_large.svg'
+      },
+      {
+        label: 'Accessories',
+        url:
+          'https://www.apple.com/v/iphone/home/aa/images/chapternav/accessories__bfu76z4hzusy_large.svg'
+      },
+      {
+        label: 'iOS 12',
+        url:
+          'https://www.apple.com/v/ipad/home/ar/images/chapternav/ios_light__d8hlu55ivueu_large.svg'
+      }
+    ]
+  },
+  {
+    id: 'watch',
+    label: 'Watch',
+    subLinks: [
+      {
+        label: 'Apple Watch Series 3',
+        url:
+          'https://www.apple.com/v/watch/home/p/images/overview/watch_nav_series_2__bk595ih4bliu_large.svg'
+      },
+      {
+        label: 'Apple Watch Nike+',
+        url:
+          'https://www.apple.com/v/watch/home/p/images/overview/watch_nav_nike__mkjgkrrlq2ye_large.svg'
+      },
+      {
+        label: 'Apple Watch Hermès',
+        url:
+          'https://www.apple.com/v/watch/home/p/images/overview/watch_nav_hermes__b1zeoxbn0df6_large.svg'
+      },
+      {
+        label: 'Apple Watch Series 3',
+        url:
+          'https://www.apple.com/v/watch/home/p/images/overview/watch_nav_edition__botzv6l1ftua_large.svg'
+      },
+      {
+        label: 'watchOS',
+        url:
+          'https://www.apple.com/v/watch/home/p/images/overview/watch_nav_watch_os__fctkp231ik6e_large.svg'
+      },
+      {
+        label: 'Bands',
+        url:
+          'https://www.apple.com/v/watch/home/p/images/overview/watch_nav_bands__f5qi8icu6suq_large.svg'
+      },
+      {
+        label: 'Accessories',
+        url:
+          'https://www.apple.com/v/watch/home/p/images/overview/watch_nav_accessories__fix8lwwxvtu2_large.svg'
+      },
+      {
+        label: 'Compare',
+        url:
+          'https://www.apple.com/v/watch/home/p/images/overview/watch_nav_compare__bjddtmfseahe_large.svg'
+      }
+    ]
+  },
+  {
+    id: 'tv',
+    label: 'TV',
+    subLinks: [
+      {
+        label: 'Apple TV',
+        url:
+          'https://www.apple.com/v/tv/home/g/images/home/apple_tv_app_dark__blle10nnpq3m_large.svg'
+      },
+      {
+        label: 'Apple TV+',
+        url:
+          'https://www.apple.com/v/tv/home/g/images/home/apple_tv_plus_dark__fntbqaxjuouy_large.svg'
+      },
+      {
+        label: 'Apple TV 4k',
+        url:
+          'https://www.apple.com/v/tv/home/g/images/home/apple_tv_dark__ern1bz8tkwqe_large.svg'
+      },
+      {
+        label: 'Apple TV HD',
+        url:
+          'https://www.apple.com/v/tv/home/g/images/home/apple_tv_dark__ern1bz8tkwqe_large.svg'
+      },
+      {
+        label: 'Air Play',
+        url:
+          'https://www.apple.com/v/tv/home/g/images/home/airplay_dark__dqiw3rzeujma_large.svg'
+      },
+      {
+        label: 'Accessories',
+        url:
+          'https://www.apple.com/v/tv/home/g/images/home/accessories_dark__dybfk40y28om_large.svg'
+      }
+    ]
+  },
+  {
+    id: 'music',
+    label: 'Music',
+    subLinks: [
+      {
+        label: 'Apple Music',
+        url:
+          'https://www.apple.com/v/music/h/images/overview/icons/apple_music_large.svg'
+      },
+      {
+        label: 'iTunes',
+        url:
+          'https://www.apple.com/v/music/h/images/overview/icons/itunes_large.svg'
+      },
+      {
+        label: 'HomePod',
+        url:
+          'https://www.apple.com/v/music/h/images/overview/icons/homepod_icon_large.svg'
+      },
+      {
+        label: 'AirPod',
+        url:
+          'https://www.apple.com/v/music/h/images/overview/icons/airpods_icon_large.svg'
+      },
+      {
+        label: 'iPod touch',
+        url:
+          'https://www.apple.com/v/music/h/images/overview/icons/ipod_touch_light_large.svg'
+      },
+      {
+        label: 'Music Accessories',
+        url:
+          'https://www.apple.com/v/music/h/images/overview/icons/accessories_large.svg'
+      },
+      {
+        label: 'Gift Cards',
+        url:
+          'https://www.apple.com/v/music/h/images/overview/icons/gift_cards_large.svg'
+      }
+    ]
+  }
+];
