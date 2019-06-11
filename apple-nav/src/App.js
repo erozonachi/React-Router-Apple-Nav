@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   const [navLinks, setNavLinks] = useState([]);
 
-  useEffect(() => setNavLinks(navList));
+  useEffect(() => setNavLinks(navList), []);
 
   return (
    <AppNav navLinks={navLinks} />
